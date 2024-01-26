@@ -8,6 +8,8 @@ int subtract(int x, int y) { return x - y; }
 int main() {
   int result;
 
+  // start session "arithmetic"
+  testmv_session_start("arithmetic");
   testmv_start("addition");
   result = add(2, 3);
   testmv_assert(result == 5);
@@ -22,6 +24,9 @@ int main() {
   result = subtract(2, 3);
   testmv_assert(result == add(2, -3));
   testmv_end();
+
+  // end and summarise the session
+  testmv_session_end();
 
   return 0;
 }

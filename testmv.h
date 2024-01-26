@@ -20,15 +20,17 @@ static inline void _smv_testmv_assert(char did_pass, const char *condition) {
 }
 
 static inline void testmv_start(const char *name) {
-  test_name = malloc(sizeof(name));
-  memcpy(test_name, name, sizeof(name));
+  int len = (strlen(name) + 1) * sizeof(char);
+  test_name = malloc(len);
+  memcpy(test_name, name, len);
 }
 
 static inline void testmv_end() { free(test_name); }
 
 static inline void testmv_session_start(const char *name) {
-  session_name = malloc(sizeof(name));
-  memcpy(session_name, name, sizeof(name));
+  int len = strlen(name) + 1;
+  session_name = malloc(len);
+  memcpy(session_name, name, len);
   printf("(testmv) Session started: %s\n", name);
 }
 

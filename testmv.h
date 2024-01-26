@@ -1,6 +1,12 @@
 #ifndef smv_testmv_h
 #define smv_testmv_h
 
+/*
+ * Author: Shreerang Vaidya
+ * Originally a part of: https://github.com/s-mv/testmv/
+ * testmv, a simple header-only testing library for C, by smv! :D
+ */
+
 #ifdef smv_testmv_enable
 
 #include <stdio.h>

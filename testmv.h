@@ -56,10 +56,22 @@ static inline void testmv_session_end() {
 
 #else
 
-// ...TODO
+#include <stdio.h>
+
 // if testing isn't enabled just completely ignore the tests
 // this makes testing easier since the developer doesn't have to remove tests
 // but simply comment out `#define testmv_enable` from their code!
+// TODO: fine a better way than if(0) perhaps
+// I know modern compilers
+
+#define testmv_session_start(_name) if (0) {
+#define testmv_start(_name)
+
+#define testmv_assert(_condition)
+
+#define testmv_end()
+
+#define testmv_session_end() }
 
 #endif
 

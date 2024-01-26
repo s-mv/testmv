@@ -25,7 +25,7 @@ int main() {
   testmv_assert(result == add(2, -3));
   testmv_end();
 
-  // end and summarise the session
+  // summarise and end the session
   testmv_session_end();
 
   return 0;

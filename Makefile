@@ -1,2 +1,7 @@
+.PHONY: clean example
+
 example:
-	$(CC) test.c -o main
+	$(CC) example.c -o example -std=c99
+
+clean:
+	rm -rf example

@@ -13,7 +13,6 @@
 // but simply comment out `#define testmv_enable` from their code!
 
 #ifdef smv_testmv_enable
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
